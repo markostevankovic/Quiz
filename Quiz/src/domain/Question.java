@@ -15,6 +15,10 @@ public class Question {
 		answers.add(answer4);
 	}
 
+	public Question() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getDescription() {
 		return description;
 	}
