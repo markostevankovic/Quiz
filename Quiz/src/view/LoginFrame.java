@@ -42,9 +42,10 @@ public class LoginFrame extends JFrame implements ActionListener{
 	 * An empty constructor of the class LoginFrame
 	 */
 	public LoginFrame(){
+		setResizable(false);
 		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 		setTitle("USER LOG IN");
-		setLayout(new GridLayout(3, 1));
+		getContentPane().setLayout(new GridLayout(3, 1));
 		
 		menuBar = new JMenuBar();
 		menuHelp = new JMenu("Help");
@@ -87,9 +88,9 @@ public class LoginFrame extends JFrame implements ActionListener{
 		panelButtons.add(buttonLogin);
 		panelButtons.add(buttonCancel);
 		
-		add(panelUsername);
-		add(panelPassword);
-		add(panelButtons);
+		getContentPane().add(panelUsername);
+		getContentPane().add(panelPassword);
+		getContentPane().add(panelButtons);
 	}
 
 	/**
