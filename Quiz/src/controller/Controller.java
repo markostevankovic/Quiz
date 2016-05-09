@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 
-import com.mysql.jdbc.integration.c3p0.MysqlConnectionTester;
+//import com.mysql.jdbc.integration.c3p0.MysqlConnectionTester;
 
 import database_connection.MySQLConnection;
 import domain.Administrator;
@@ -747,5 +747,29 @@ public class Controller {
 			i++;
 		}
 		tmp.clear();
+	}
+	/*
+	 * Method showing message, through which is user informed about actions
+	 * which should be performed before using this application
+	 */
+	public static void showInformationDatabaseDialog() {
+		JOptionPane.showMessageDialog(
+				null,
+				"Before using this application furthermore,\n"
+				+ "make sure that you have imported .sql file (which can found in package 'database')\n"
+				+ "as a database in phpmyadmin.\n"
+				+ "Also, mysql driver is located in package database->driver.",
+				"Information", 
+				JOptionPane.INFORMATION_MESSAGE);	
+	}
+	
+	/*
+	 * Method showing loginFrame
+	 */
+	public static void showLoginFrame() {
+		LoginFrame login = new LoginFrame();
+		login.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		login.setVisible(true);
+		login.setLocationRelativeTo(null);
 	}
 }

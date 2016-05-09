@@ -2,6 +2,7 @@ package view;
 
 import javax.swing.JFrame;
 
+import controller.Controller;
 import database_connection.MySQLConnection;
 
 /**
@@ -13,10 +14,8 @@ import database_connection.MySQLConnection;
 public class MainClass {
 
 	public static void main(String[] args) {
-		LoginFrame login = new LoginFrame();
-		login.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		login.setVisible(true);
-		login.setLocationRelativeTo(null);
+		Controller.showInformationDatabaseDialog();
+		Controller.showLoginFrame();
 	}
 	
 }
